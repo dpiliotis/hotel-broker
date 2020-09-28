@@ -90,7 +90,6 @@ public class BookingController {
 
   @GetMapping
   public ApiResponse<List<BookingDto>> getBookingsByHotelId(@RequestParam(value = "hotel_id") @Positive Long hotelId) {
-
     logger.info("Request bookings for hotel with id: {}", hotelId);
 
     List<BookingDto> result = bookingService
@@ -104,7 +103,6 @@ public class BookingController {
 
   @GetMapping("/price")
   public ApiResponse<List<AggregatedPriceDto>> getPricesByHotelId(@RequestParam(value = "hotel_id") @Positive Long hotelId) {
-
     logger.info("Request price amounts for hotel with id: {}", hotelId);
 
     List<Price> prices = bookingService.getPrices(hotelId);

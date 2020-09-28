@@ -65,11 +65,10 @@ public class HotelController {
   private List<HotelDto> getAllHotels() {
     logger.info("Request all hotels");
 
-    List<Hotel> hotels = hotelService.getAllHotels();
-    return hotels
-        .stream()
-        .map(hotelMapper::convertToDto)
-        .collect(Collectors.toList());
+    return hotelService.getAllHotels()
+                       .stream()
+                       .map(hotelMapper::convertToDto)
+                       .collect(Collectors.toList());
   }
 
   @GetMapping(path = "/{hotelId}")
