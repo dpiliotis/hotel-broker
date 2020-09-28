@@ -1,0 +1,11 @@
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      ddl-auto: create-drop
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/hotel_broker_db?charSet=utf8&serverTimezone=UTC
+    username: root
+    password: root
+    initialization-mode: always
